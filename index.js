@@ -13,8 +13,11 @@ function dataFetcher()
     var hashPasswordToHex = hashPassword.toString(CryptoJS.enc.Hex);
     console.log(hashPasswordToHex);
 
-    var shortHashPasswordToHex = hashPasswordToHex.substring(0,5);
-    console.log(shortHashPasswordToHex);
+    var shortHashPasswordHex = hashPasswordToHex.substring(0,5);
+    console.log(shortHashPasswordHex);
+
+    var slicedHashPasswordHex = hashPasswordToHex.slice(5);
+    console.log(slicedHashPasswordHex);
 
 
     return true;
