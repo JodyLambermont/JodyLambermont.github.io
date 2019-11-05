@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Software security</title>
+        
+        <!-- Loading JavaScript functions -->
+        <script src="index.js" type="text/javascript"></script>
+        <!-- Loading JavaScript Crypto JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/sha1.js" integrity="sha256-/KLVVgrLjedg68lGef8hAFZyKvgZOHHnUXamGpd6ww8=" crossorigin="anonymous"></script>
+
+    </header>
+
+    <body>
+
+        <h1>Software Security</h1>
+        <p>This website is created using github pages, freenom and cloudflare. The purpose of this website is to learn about software security and is a series of tasks</p>
+        <br >
+        <p>The following form works with 'https://haveibeenpwned.com/API/v3#PwnedPasswords' and checks a given password to see if it is used too often.</p>
+
+        <p>Insert password that you wish is checked</p>
+        <input type="text" placeholder="Password" id="PasswordToCheck"></input>
+        <button type="button" onclick="dataFetcher()">Press here to check</button>
+
+    </body>
+</html>
