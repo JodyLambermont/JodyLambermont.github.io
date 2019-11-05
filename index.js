@@ -63,8 +63,16 @@ function dataFetcher()
             }
             console.log("result: " + result);
             console.log("found item:" + FOUNDIT);      
-            if(FOUNDIT > 30000){console.log("succes");}
-            else {console.log("gefaald")};
+            if(FOUNDIT > 30000)
+            {
+                console.log("succes");
+                document.getElementById("paragraphToEdit").innerText("Wachtwoord goedgekeurd, het komt zeer zelden of niet voor in HIBP database.");
+            }
+            else 
+            {
+                console.log("gefaald")
+                document.getElementById("paragraphToEdit").innerText("Wachtwoord geweigerd, het komt meer dan 300 keer voor, namelijk: " + FOUNDIT);
+            };
                       
         }
     }
