@@ -66,12 +66,12 @@ function dataFetcher()
             if(FOUNDIT > 300)
             {
                 console.log("succes");
-                document.getElementById("paragraphToEdit").innerHTML("Wachtwoord goedgekeurd, het komt zeer zelden of niet voor in HIBP database.");
+                document.getElementById("paragraphToEdit").innerHTML = "Wachtwoord goedgekeurd, het komt zeer zelden of niet voor in HIBP database.";
             }
             else 
             {
                 console.log("gefaald")
-                document.getElementById("paragraphToEdit").innerHTML("Wachtwoord geweigerd, het komt meer dan 300 keer voor, namelijk: " + FOUNDIT);
+                document.getElementById("paragraphToEdit").innerHTML = "Wachtwoord geweigerd, het komt meer dan 300 keer voor, namelijk: " + FOUNDIT;
             };
                       
         }
