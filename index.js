@@ -68,6 +68,10 @@ function dataFetcher()
             }
             else 
             {
+                if(FOUNDIT == undefined)
+                {
+                    FOUNDIT = 0;
+                }
                 //console.log("gefaald")
                 document.getElementById("paragraphToEdit").innerHTML = "Wachtwoord goedgekeurd, het komt zeer zelden of niet voor in HIBP database. Slechts: " + FOUNDIT;
                 
