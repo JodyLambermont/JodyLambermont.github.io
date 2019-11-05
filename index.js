@@ -63,7 +63,7 @@ function dataFetcher()
             }
             console.log("result: " + result);
             console.log("found item:" + FOUNDIT);      
-            if(FOUNDIT > 30000)
+            if(FOUNDIT > 300)
             {
                 console.log("succes");
                 document.getElementById("paragraphToEdit").innerText("Wachtwoord goedgekeurd, het komt zeer zelden of niet voor in HIBP database.");
