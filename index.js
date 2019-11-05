@@ -18,7 +18,9 @@ function dataFetcher()
     console.log(shortHashPasswordHex);
 
     // this sliced hash password is to get the corresponding object in the JSON answer (the first 5 are missing from the substring - K-anonymity)
+    // NEED TO FIND THIS IN RESPONSE
     var slicedHashPasswordHex = hashPasswordToHex.slice(5);
+    slicedHashPasswordHex = slicedHashPasswordHex.toUpperCase();
     console.log(slicedHashPasswordHex);
 
     // building the get request
@@ -33,7 +35,37 @@ function dataFetcher()
     https.onreadystatechange=function(){
         if(this.readyState == 4 && this.status == 200)
         {
-            console.log(https.responseText);
+            //console.log(https.responseText);
+            //console.log(typeof(https.responseText));
+            httpAnswer = this.responseText.split('\n');
+            console.log(httpAnswer);
+            //console.log(typeof(httpAnswer));
+            //console.log(httpAnswer.length);
+            var result = false;
+            for(index in httpAnswer){
+            //console.log(httpAnswer[index].substring(0, 35));
+                // Check if the line matches the rest of the hash
+                /*if(httpAnswer[index].substring(0, 35) == slicedHashPasswordHex)*/
+                //console.log(httpAnswer[index]);
+                //console.log(slicedHashPasswordHex);
+                if(httpAnswer[index].includes(slicedHashPasswordHex)){
+                 console.log(httpAnswer[index].includes(slicedHashPasswordHex));
+                result = true;
+                console.log(httpAnswer[index].slice(36));
+                var FOUNDIT = httpAnswer[index].slice(36);
+                console.log(httpAnswer[index]);
+                    console.log("found it");
+                    // If found no need to continue the loop
+                    break;
+                    
+                     
+                }
+            }
+            console.log("result: " + result);
+            console.log("found item:" + FOUNDIT);      
+            if(FOUNDIT > 30000){console.log("succes");}
+            else {console.log("gefaald")};
+                      
         }
     }
 
