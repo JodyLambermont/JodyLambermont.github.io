@@ -24,7 +24,7 @@ function dataFetcher()
     // building the get request
     // https://api.pwnedpasswords.com/range/
     const https = new XMLHttpRequest;
-    const url = 'https://api.pwnedpasswords.com/range/' + slicedHashPasswordHex;
+    const url = 'https://api.pwnedpasswords.com/range/' + shortHashPasswordHex;
     console.log(url);
 
     https.open("get", url);
